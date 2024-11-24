@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XSCAPE’s Blog</title><link>https://xscape.dev/</link><description>Recent content on XSCAPE’s Blog</description><generator>Hugo</generator><language>zh</language><copyright>© 2024, xscape_dev</copyright><lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate><atom:link href="https://xscape.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>在.NET中使用Redis</title><link>https://xscape.dev/post/net-csredis/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/post/net-csredis/</guid><description>&lt;h2 id="为什么选择csredis">为什么选择CSRedis&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Redis on XSCAPE’s Blog</title><link>https://xscape.dev/tags/redis/</link><description>Recent content in Redis on XSCAPE’s Blog</description><generator>Hugo</generator><language>zh</language><copyright>© 2024, xscape_dev</copyright><lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate><atom:link href="https://xscape.dev/tags/redis/index.xml" rel="self" type="application/rss+xml"/><item><title>在.NET中使用Redis</title><link>https://xscape.dev/post/net-csredis/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/post/net-csredis/</guid><description>&lt;h2 id="为什么选择csredis">为什么选择CSRedis&lt;/h2>
 &lt;ol>
 &lt;li>ServiceStack.Redis 是商业版，免费版有限制；&lt;/li>
 &lt;li>StackExchange.Redis 是免费版，但是内核在 .NETCore 运行有问题经常 Timeout，暂无法解决；&lt;/li>
@@ -31,16 +31,4 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 移除元素&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Del(&lt;span style="color:#e6db74">&amp;#34;world&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在对同一个键多次赋值时，该键的值是最后一次赋值时的值，实例中&lt;code>hello&lt;/code>对应的值最终为&lt;code>3&lt;/code>。&lt;/p></description></item><item><title/><link>https://xscape.dev/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/archives/</guid><description/></item><item><title>About</title><link>https://xscape.dev/about/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/about/</guid><description>&lt;p>Written in Go, Hugo is an open source static site generator available under the &lt;a href="https://github.com/gohugoio/hugo/blob/master/LICENSE">Apache Licence 2.0.&lt;/a> Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p>
-&lt;p>Hugo makes use of a variety of open source projects including:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/yuin/goldmark">https://github.com/yuin/goldmark&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/alecthomas/chroma">https://github.com/alecthomas/chroma&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/muesli/smartcrop">https://github.com/muesli/smartcrop&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/spf13/viper">https://github.com/spf13/viper&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p></description></item><item><title>Contact</title><link>https://xscape.dev/contact/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/contact/</guid><description>&lt;ul>
-&lt;li>&lt;a href="https://github.com/nanxiaobei">github.com/nanxiaobei&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://lee.so">lee.so&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在对同一个键多次赋值时，该键的值是最后一次赋值时的值，实例中&lt;code>hello&lt;/code>对应的值最终为&lt;code>3&lt;/code>。&lt;/p></description></item></channel></rss>
