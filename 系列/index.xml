@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Index on XSCAPE&#39;s Blog</title>
-    <link>https://xscape.dev/tags/index/</link>
-    <description>Recent content in Index on XSCAPE&#39;s Blog</description>
+    <title>系列 on XSCAPE&#39;s Blog</title>
+    <link>https://xscape.dev/%E7%B3%BB%E5%88%97/</link>
+    <description>Recent content in 系列 on XSCAPE&#39;s Blog</description>
     <image>
       <title>XSCAPE&#39;s Blog</title>
       <url>https://xscape.dev/images/papermod-cover.png</url>
       <link>https://xscape.dev/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.139.2</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://xscape.dev/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xscape.dev/%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

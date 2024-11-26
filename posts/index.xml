@@ -10,16 +10,16 @@
       <link>https://xscape.dev/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.139.2</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>PaperMod Contributors</copyright>
     <lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate>
     <atom:link href="https://xscape.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>在.NET中使用Redis</title>
+      <title>在 .NET 中使用 Redis</title>
       <link>https://xscape.dev/posts/net-csredis/</link>
       <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
       <guid>https://xscape.dev/posts/net-csredis/</guid>
-      <description>此文章详细讲解了 `CSRedis` 的安装和常见功能的使用方法，包括字符串、列表、集合、散列、有序集合、管道及键的过期设置等内容，适合初学者快速上手。</description>
+      <description>此文章详细讲解了 CSRedis 的安装和常见功能的使用方法，包括字符串、列表、集合、散列、有序集合、管道及键的过期设置等内容，适合初学者快速上手。</description>
     </item>
   </channel>
 </rss>
