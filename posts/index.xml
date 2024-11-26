@@ -19,7 +19,7 @@
       <link>https://xscape.dev/posts/net-csredis/</link>
       <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
       <guid>https://xscape.dev/posts/net-csredis/</guid>
-      <description>Desc Text.</description>
+      <description>此文章详细讲解了 `CSRedis` 的安装和常见功能的使用方法，包括字符串、列表、集合、散列、有序集合、管道及键的过期设置等内容，适合初学者快速上手。</description>
     </item>
   </channel>
 </rss>
