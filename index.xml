@@ -1,46 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XSCAPE’s Blog</title><link>https://xscape.dev/</link><description>Recent content on XSCAPE’s Blog</description><generator>Hugo</generator><language>zh</language><copyright>© 2024, xscape_dev</copyright><lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate><atom:link href="https://xscape.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>在.NET中使用Redis</title><link>https://xscape.dev/post/net-csredis/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/post/net-csredis/</guid><description>&lt;h2 id="为什么选择csredis">为什么选择CSRedis&lt;/h2>
-&lt;ol>
-&lt;li>ServiceStack.Redis 是商业版，免费版有限制；&lt;/li>
-&lt;li>StackExchange.Redis 是免费版，但是内核在 .NETCore 运行有问题经常 Timeout，暂无法解决；&lt;/li>
-&lt;li>CSRedis 于 2016 年开始支持 .NETCore 一直迭代至今，实现了低门槛、高性能，和分区高级玩法的 .NETCore redis-cli SDK；&lt;/li>
-&lt;/ol>
-&lt;p>在 v3.0 版本更新中，CSRedis 中的所有方法名称进行了调整，使其和 redis-cli 保持一致，如果你熟悉 redis-cli 的命令，CSRedis 可以直接上手，学习成本就低很多。&lt;/p>
-&lt;h2 id="安装csredis-x1f638">安装CSRedis 😸&lt;/h2>
-&lt;p>直接使用 Visual Studio 中的 Nuget 包管理器搜索安装即可，使用连接字符串创建 redis 实例，并执行&lt;code>RedisHelper.Initialization()&lt;/code>进行初始化。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> csredis = &lt;span style="color:#66d9ef">new&lt;/span> CSRedisClient(&lt;span style="color:#e6db74">&amp;#34;127.0.0.1:6379,password=YourPassword&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>RedisHelper.Initialization(csredis);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你没有给redis设置密码，那么直接写上ip就行，否则的话要把password写进连接字符串中。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> csredis = &lt;span style="color:#66d9ef">new&lt;/span> CSRedisClient(&lt;span style="color:#e6db74">&amp;#34;127.0.0.1:6379&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>RedisHelper.Initialization(csredis);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后就可以进行redis操作了。&lt;/p>
-&lt;h2 id="字符串string">字符串(string)&lt;/h2>
-&lt;p>关于字符串的&lt;code>value&lt;/code>：&lt;/p>
-&lt;ol>
-&lt;li>value 可以用来存储任意格式的数据，如 json、jpg 甚至是视频文件；&lt;/li>
-&lt;li>value 的最大容量是512M；&lt;/li>
-&lt;li>value 可以存储3种类型的值：字节串（byte string）、整数（int）、浮点数（double）；&lt;/li>
-&lt;/ol>
-&lt;p>其中，整数的取值范围和系统的长整数取值范围相同，在32位的操作系统上，整数就是32位的；在64位操作系统上，整数就是64位有符号整数。浮点数的取值范围和 IEEE 754 标准的双精度浮点数相同。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 添加字符串键-值对&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Set(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;1&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Set(&lt;span style="color:#e6db74">&amp;#34;world&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;2&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Set(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;3&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 根据键获取对应的值&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Get(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 移除元素&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>csredis.Del(&lt;span style="color:#e6db74">&amp;#34;world&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在对同一个键多次赋值时，该键的值是最后一次赋值时的值，实例中&lt;code>hello&lt;/code>对应的值最终为&lt;code>3&lt;/code>。&lt;/p></description></item><item><title/><link>https://xscape.dev/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/archives/</guid><description/></item><item><title>About</title><link>https://xscape.dev/about/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/about/</guid><description>&lt;p>Written in Go, Hugo is an open source static site generator available under the &lt;a href="https://github.com/gohugoio/hugo/blob/master/LICENSE">Apache Licence 2.0.&lt;/a> Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p>
-&lt;p>Hugo makes use of a variety of open source projects including:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/yuin/goldmark">https://github.com/yuin/goldmark&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/alecthomas/chroma">https://github.com/alecthomas/chroma&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/muesli/smartcrop">https://github.com/muesli/smartcrop&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/spf13/viper">https://github.com/spf13/viper&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p></description></item><item><title>Contact</title><link>https://xscape.dev/contact/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://xscape.dev/contact/</guid><description>&lt;ul>
-&lt;li>&lt;a href="https://github.com/nanxiaobei">github.com/nanxiaobei&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://lee.so">lee.so&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>XSCAPE&#39;s Blog</title>
+    <link>https://xscape.dev/</link>
+    <description>Recent content on XSCAPE&#39;s Blog</description>
+    <image>
+      <title>XSCAPE&#39;s Blog</title>
+      <url>https://xscape.dev/images/papermod-cover.png</url>
+      <link>https://xscape.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.139.2</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate>
+    <atom:link href="https://xscape.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在.NET中使用Redis</title>
+      <link>https://xscape.dev/posts/net-csredis/</link>
+      <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
+      <guid>https://xscape.dev/posts/net-csredis/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://xscape.dev/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://xscape.dev/about/</guid>
+      <description>Hugo, the world&amp;#39;s fastest framework for building websites</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://xscape.dev/contact/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://xscape.dev/contact/</guid>
+      <description>Hugo, the world&amp;#39;s fastest framework for building websites</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on XSCAPE’s Blog</title><link>https://xscape.dev/tags/</link><description>Recent content in Tags on XSCAPE’s Blog</description><generator>Hugo</generator><language>zh</language><copyright>© 2024, xscape_dev</copyright><lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate><atom:link href="https://xscape.dev/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>.Net</title><link>https://xscape.dev/tags/.net/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/tags/.net/</guid><description/></item><item><title>Index</title><link>https://xscape.dev/tags/index/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/tags/index/</guid><description/></item><item><title>Redis</title><link>https://xscape.dev/tags/redis/</link><pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate><guid>https://xscape.dev/tags/redis/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on XSCAPE&#39;s Blog</title>
+    <link>https://xscape.dev/tags/</link>
+    <description>Recent content in Tags on XSCAPE&#39;s Blog</description>
+    <image>
+      <title>XSCAPE&#39;s Blog</title>
+      <url>https://xscape.dev/images/papermod-cover.png</url>
+      <link>https://xscape.dev/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.139.2</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Sun, 26 Mar 2023 20:51:41 +0800</lastBuildDate>
+    <atom:link href="https://xscape.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.Net</title>
+      <link>https://xscape.dev/tags/.net/</link>
+      <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
+      <guid>https://xscape.dev/tags/.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Index</title>
+      <link>https://xscape.dev/tags/index/</link>
+      <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
+      <guid>https://xscape.dev/tags/index/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>https://xscape.dev/tags/redis/</link>
+      <pubDate>Sun, 26 Mar 2023 20:51:41 +0800</pubDate>
+      <guid>https://xscape.dev/tags/redis/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

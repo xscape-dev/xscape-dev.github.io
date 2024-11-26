@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://xscape.dev/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/tags/.net/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/tags/index/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/post/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/tags/redis/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/tags/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/post/net-csredis/</loc><lastmod>2023-03-26T20:51:41+08:00</lastmod></url><url><loc>https://xscape.dev/archives/</loc><lastmod>2019-05-28T00:00:00+00:00</lastmod></url><url><loc>https://xscape.dev/about/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod></url><url><loc>https://xscape.dev/contact/</loc><lastmod>2019-02-28T00:00:00+00:00</lastmod></url><url><loc>https://xscape.dev/categories/</loc></url><url><loc>https://xscape.dev/series/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://xscape.dev/en/sitemap.xml</loc>
+    
+      <lastmod>2023-03-26T20:51:41+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://xscape.dev/fr/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://xscape.dev/fa/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>

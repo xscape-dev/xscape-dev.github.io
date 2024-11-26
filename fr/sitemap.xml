@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://xscape.dev/fr/frcategories/</loc>
+  </url><url>
+    <loc>https://xscape.dev/fr/frseries/</loc>
+  </url><url>
+    <loc>https://xscape.dev/fr/frtags/</loc>
+  </url><url>
+    <loc>https://xscape.dev/fr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://xscape.dev/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="https://xscape.dev/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://xscape.dev/fr/"
+                />
+  </url>
+</urlset>
