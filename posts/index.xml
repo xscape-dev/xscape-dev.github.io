@@ -12,8 +12,15 @@
     <generator>Hugo -- 0.139.2</generator>
     <language>zh</language>
     <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate>Thu, 03 Jan 2019 20:51:41 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Mar 2023 09:30:00 +0800</lastBuildDate>
     <atom:link href="https://xscape.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C 语言：数组</title>
+      <link>https://xscape.dev/posts/c_array/</link>
+      <pubDate>Sat, 25 Mar 2023 09:30:00 +0800</pubDate>
+      <guid>https://xscape.dev/posts/c_array/</guid>
+      <description>本文讲解了C语言中指针与数组的基础操作，讲解了取址、解引用、数组初始化规则及边界保护的重要性，并通过示例说明了指针形参、双指针和const关键字的应用，强调了避免解引用未初始化指针和保护数组数据的实用方法。</description>
+    </item>
     <item>
       <title>在 .NET 中使用 Redis</title>
       <link>https://xscape.dev/posts/net-csredis/</link>
